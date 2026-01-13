@@ -82,7 +82,11 @@ smtp_header_checks = {{ postfix_header_checks_database_type }}:{{ postfix_header
 mydestination = {{ postfix_mydestination | join(', ') }}
 mynetworks = {{ postfix_mynetworks | join(' ') }}
 mailbox_size_limit = 0
+{% if postfix_recipient_delimiter is string %}
+recipient_delimiter = {{ postfix_recipient_delimiter }}
+{% else %}
 recipient_delimiter = +
+{% endif %}
 {% if postfix_inet_interfaces is string %}
 inet_interfaces = {{ postfix_inet_interfaces }}
 {% else %}
