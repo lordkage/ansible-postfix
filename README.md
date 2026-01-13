@@ -83,6 +83,7 @@ None
  * `postfix_smtpd_tls_protocols` [optional]: TLS protocols accepted by the Postfix SMTP server with opportunistic TLS encryption ([see](https://www.postfix.org/postconf.5.html#smtpd_tls_protocols))
 
  * `postfix_recipient_delimiter` [optional]: Set the recipient delimiter, defaults to `+`
+ * `postfix_mailbox_size_limit` [optional]: Set the mailbox size limit, defaults to 0
 
  * `postfix_raw_options` [default: `[]`]: List of lines (to pass extra (unsupported) configuration)
 
